@@ -5,13 +5,16 @@
   "license": "MIT",
   "scripts": {
     "prisma:generate": "prisma generate",
-    "postinstall": "prisma generate"
+    "postinstall": "prisma generate",
+    "prisma:db:push": "prisma db push --preview-feature"
   },
   "devDependencies": {
     "prisma": "^2.18.0",
     "vercel": "^21.3.3"
   },
   "dependencies": {
-    "@prisma/client": "^2.18.0"
+    "@prisma/client": "^2.18.0",
+    "joi": "^17.4.0",
+    "node-fetch": "^2.6.1"
   }
 }

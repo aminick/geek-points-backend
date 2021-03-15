@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "env": {
+    "DATABASE_URL": "@database_url",
+    "SHOPIFY_ACCESS_TOKEN": "@shopify-access-token",
+    "SHOPIFY_STORE_URL": "@shopify-store-url"
+  },
+  "build": {
+    "env": {
+      "DATABASE_URL": "@database_url",
+      "SHOPIFY_ACCESS_TOKEN": "@shopify-access-token",
+      "SHOPIFY_STORE_URL": "@shopify-store-url"
+    }
+  },
+  "cleanUrls": true
+}

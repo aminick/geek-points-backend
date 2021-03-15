@@ -1,0 +1,27 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  // url      = env("DATABASE_URL")
+  url      = "postgres://ujkkudpsckvktp:c6c236ed897a45ecc0086e1202dea79a4c45836d4101dee07059c9910d5e65da@ec2-54-159-175-113.compute-1.amazonaws.com:5432/d1rp1tunute0n3"
+}
+
+model Customer {
+  customer_id BigInt @id
+  email   String @unique
+  last_name String?
+  first_name String?
+  transaction Transaction[]
+}
+
+model Transaction {
+  id Int @id @default(autoincrement())
+  order_id BigInt? @unique
+  value Float
+  timestamp DateTime @default(now())
+  memo String?
+  customer Customer @relation(fields: [customer_id], references: [customer_id])
+  customer_id BigInt
+}
