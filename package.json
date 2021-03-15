@@ -1,0 +1,17 @@
+{
+  "name": "geek-points-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "prisma:generate": "prisma generate",
+    "postinstall": "prisma generate"
+  },
+  "devDependencies": {
+    "prisma": "^2.18.0",
+    "vercel": "^21.3.3"
+  },
+  "dependencies": {
+    "@prisma/client": "^2.18.0"
+  }
+}
